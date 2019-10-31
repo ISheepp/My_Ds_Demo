@@ -5,7 +5,7 @@ int main()
 {
     const int NUM_ROWS = 30,
               NUM_COLUMNS = 20;
-    //使用typedef声明一个通用的函数
+    //使用typedef声明一个通用的函数(便于声明)
     typedef double TwoDimArray[NUM_ROWS][NUM_COLUMNS];
     TwoDimArray scoresTable;
     int numStudents, numTests;
@@ -17,6 +17,6 @@ int main()
     {
         cout << '#' << r+1 << ':';
         for(int c = 0; c <numTests; c++) //内循环控制列
-        cin >> scoresTable[r][c];
+        cin >> scoresTable[r][c]; 
     } 
 }
