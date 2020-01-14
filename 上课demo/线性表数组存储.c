@@ -72,7 +72,6 @@ void Delete(int i,List L){
 ElementType FindKth(int K,List L){
 	if(K < 0 || L->Last < K){  //位置越界
         printf("L->Data[%d]不存在元素",K);
-        return;
     }
     return L->Data[K];
 }
