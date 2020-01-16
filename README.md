@@ -6,8 +6,10 @@
   <a class="header-badge" target="_blank" href="https://twitter.com/YANG96181509">
   <img alt="Twitter Follow" src="https://badgen.net/badge/icon/twitter?icon=twitter&label">
   </a>
-  <sub>Author:
-      <a href="https://www.codelin.xyz/" target="_blank">🐏Yang</a></sub><br>
+  <a class="header-badge" target="_blank" href="https://codelin.xyz">
+  <img alt="Twitter Follow" src="https://img.shields.io/badge/Author-%F0%9F%90%8FYang-lightgrey">
+  </a>
+  <br>
   <sub> January--December, 2020
   </sub>
 </div>
