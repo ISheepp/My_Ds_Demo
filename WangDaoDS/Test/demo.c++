@@ -1,12 +1,17 @@
 #include <iostream>
 using namespace std;
-int add (int a, int b)
+
+void testYinYong(int a, int b, int &c)
 {
-    return a + b;
+    c = a + b;
+}
+void testNoYY(int a, int b, int c)
+{
+    c = a + b;
 }
 int main()
 {
-    int result;
-    result = add(1,2);
+    int result = 0;
+    testNoYY(1,2,result);
     cout << result;
 }
