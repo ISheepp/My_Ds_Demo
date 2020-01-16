@@ -12,23 +12,22 @@
   </sub>
 </div>
 
-## 
 
 ## 🐭Start the new year with coding learning
 
-![mark](https://img.codelin.xyz/blog/20200116/IjfvgEs5mpyR.png?imageslim)
+![mark](https://img.codelin.xyz/blog/20200116/5RR5cQQwA9Pj.png?imageslim)
 
 ## 🔧Contributions
 
 + 王道数据结构
 + 天勤数据结构
 
----
-
 ## ✏Progress:
 
 1. 线性表
    + 顺序表
    + 链表
+
+---
 
 # 💻<3 people who code
