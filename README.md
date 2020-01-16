@@ -1,4 +1,4 @@
-# 🐱‍🏍My_Ds_Demo
+# 🖥My_Ds_Demo
 ---
 <div align="center">
   <h1> Data Structure of kaoyan</h1>
@@ -7,8 +7,8 @@
   <img alt="Twitter Follow" src="https://badgen.net/badge/icon/twitter?icon=twitter&label">
   </a>
   <sub>Author:
-  <a href="https://www.codelin.xyz/" target="_blank">🐏Yang</a><br>
-  <small> January--December, 2020</small>
+      <a href="https://www.codelin.xyz/" target="_blank">🐏Yang</a></sub><br>
+  <sub> January--December, 2020
   </sub>
 </div>
 
