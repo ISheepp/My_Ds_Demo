@@ -15,7 +15,7 @@
 </div>
 
 
-## 🐭Start the new year with coding learning
+## 🐭Start the new year with code learning
 
 ![mark](https://img.codelin.xyz/blog/20200116/5RR5cQQwA9Pj.png?imageslim)
 
