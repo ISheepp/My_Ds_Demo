@@ -2,17 +2,19 @@
 #include <math.h>
 using namespace std;
 //移动过程
-void move(int n, char first, char middle, char end)
+void move(int n, char A, char B, char C)
 {
+    int time = 0;
     if(n == 1)
     {
-        cout << first << "-->" << end << endl;
+        cout << A << "-->" << C << endl;
+        time++;
     }
     else
     {
-        move(n-1, first, end, middle);
-        cout << first << "-->" << end << endl;  //相当于move(1,first, middle, end)
-        move(n-1, middle, first, end);
+        move(n-1, A, C, B);
+        cout << A << "-->" << C << endl;
+        move(n-1, B, A, C);
     }
 }
 //移动步数
