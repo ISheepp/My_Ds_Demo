@@ -1,27 +1,24 @@
 #include <iostream>
 using namespace std;
-int hannuota(int n,string a,string b,string c)
+//目标是A->C
+void hanoi(int N ,char A , char B ,char C)
 {
-    if(n==1)
+    if(N == 1)
+        cout << A << "-->" << C << endl ;
+    else
     {
-        //只有一个盘子的情况下直接将第一个塔上的盘子移动到第三个塔
-        printf("%s------>%s\n",a.c_str(),c.c_str());
+        hanoi(N-1 , A , C , B) ;
+        cout << A << "-->" << C << endl ; //==hanoi(1,a,b,c)
+        hanoi(N-1 , B , A , C) ;
     }
-    else{
-        //1.先将第一个塔的n-1个盘子全部通过第三个塔移动到第二个塔上
-        hannuota(n-1,a, c, b);
-        //2.再将剩下的一个盘子移动到第三个塔上
-        printf("%s------>%s\n",a.c_str(),c.c_str());
-        //3.最后将第二个塔上的盘子通过第一个塔移动到第三个塔上
-        hannuota(n-1, b, a, c);
-    }
-    return 1;
 }
-int main(int argc, const char * argv[]) {
-    printf("请输入盘子的数量:\n");
+int main()
+{
     int n;
-    scanf("%d",&n);
-    printf("盘子移动如下:\n");
-    hannuota(n,"A","B","C");
+    cout << "输入盘子的个数:";
+    cin >> n;
+    cout << "移动过程如下" << endl;
+    cout << "-----------" << endl;
+    hanoi(n, 'A' , 'B' , 'C') ;
     return 0;
 }

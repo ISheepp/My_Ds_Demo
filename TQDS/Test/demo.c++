@@ -1,17 +1,17 @@
 #include <iostream>
 using namespace std;
-
-void testYinYong(int a, int b, int &c)
+//阶乘
+int jiecheng(int n)
 {
-    c = a + b;
-}
-void testNoYY(int a, int b, int c)
-{
-    c = a + b;
+    if(n <= 1)
+        return 1;
+    else
+    {
+        return (n * jiecheng(n-1));
+    }
+    
 }
 int main()
 {
-    int result = 0;
-    testNoYY(1,2,result);
-    cout << result;
+    cout << jiecheng(3);
 }
