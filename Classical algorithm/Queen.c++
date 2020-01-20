@@ -9,15 +9,13 @@ static int Count = 0;
 void print()
 {
     int outer, inner;
-    for (outer = 0; outer < 8; outer++)
+    for (outer = 0; outer < 8; outer++) //打印8行
     {
         for (inner = 0; inner < Queen[outer]; inner++)
             cout << "0 ";
-        
-        cout << "1 ";
-
+        cout << "1 "; //每行首个元素打印为1
         for (inner = Queen[outer] + 1; inner < 8; inner++)
-            cout << "0 ";
+            cout << "0 "; //打印后面7列
         cout << "\n";
     }
     cout << "==================" << endl;
@@ -48,7 +46,6 @@ int is_true(int loop, int value)
 }
 /*
 对皇后进行计算
----------待学习
 */
 void eight_queue(int index)
 {
@@ -61,7 +58,7 @@ void eight_queue(int index)
         {
             //如果可行就将结构记录在这个全局数组中
             Queen[index] = loop;
-            if (7 == index)
+            if (7 == index)  //当第八行的棋子摆好时结束并打印
             {
                 //打印并将全局变量增加一次
                 Count++;
@@ -83,4 +80,5 @@ int main()
     eight_queue(0);
     cout << "total = " << Count << endl;
     return 1;
+    
 }
