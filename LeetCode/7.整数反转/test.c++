@@ -18,5 +18,5 @@ int reverse(int x)
 //未确定溢出方案
 int main()
 {
-    cout << reverse(123123);
+    cout << reverse(1234);
 }
