@@ -1,9 +1,7 @@
 //
 // Created by 安炳旭 on 2019-08-21.
 //
-
 #include <cstdio>
-
 #define ElemType int
 #define MAX_SIZE 50
 //定义顺序表的结构体
