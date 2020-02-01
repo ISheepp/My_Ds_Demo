@@ -3,3 +3,28 @@
 */
 #include <iostream>
 using namespace std;
+const int maxSize = 50;
+int A[maxSize];
+int length;
+//建表
+int createList(int A[], int &length)
+{
+    if(length > maxSize)
+        return 0;
+    cout << "输入顺序表长度:";
+    cin >> length;
+    for(int i = 0; i < length; i++)
+    {
+        cin >> A[i];
+    }
+    return 1;
+}
+
+int main(){
+    int test[10];
+    createList(test, length);
+    for(int i = 0; i < length; i++)
+    {
+        cout << test[i] << ",";
+    }
+}
