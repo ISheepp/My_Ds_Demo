@@ -9,7 +9,7 @@ using namespace std;
 int sqList[maxSize] = {1, 2, 3, 4, 5, 6 ,7, 8, 9};
 int length = 9;
 int e = 3;
-//插入
+//在p处插入e
 int insertElem(int sqList[], int &length, int p, int e)
 {
     if(p < 0 || p > length || length == maxSize)
