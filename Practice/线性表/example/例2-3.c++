@@ -28,7 +28,8 @@ void createLinkListR(LNode *&head)
         r = p;
     }
 }
-void merge(LNode *A, LNode *B, LNode *C)
+//归并
+void merge(LNode *A, LNode *B, LNode *&C)
 {
     LNode *p = A->next;
     LNode *q = B->next;
@@ -42,7 +43,7 @@ void merge(LNode *A, LNode *B, LNode *C)
         if(p->data <= q->data)
         {
             r->next = p;p = p->next;
-            r= r->next; 
+            r = r->next;
         }
         else
         {
@@ -57,13 +58,16 @@ void merge(LNode *A, LNode *B, LNode *C)
 }
 int main()
 {
-    LNode *test;
-    createLinkListR(test);
-    //链表的输出
-    for(int i = 0; i < 6; i++)
+    LNode *A;
+    LNode *B;
+    LNode *C;
+    createLinkListR(A);
+    createLinkListR(B);
+    createLinkListR(C);
+    merge(A, B, C);
+    for(int i = 0; i < 8; i++)
     {
-        cout << test->data << ",";
-        test = test->next;
+        cout << C->data << ",";
+        C = C->next;
     }
-    cout << endl;
 }
