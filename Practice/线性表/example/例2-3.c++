@@ -56,6 +56,45 @@ void merge(LNode *A, LNode *B, LNode *&C)
     if(q != NULL)
         r->next = q;
 }
+//链表逆序归并(利用头插法)
+void deMerge(LNode *A, LNode *B, LNode *&C)
+{
+    LNode *p = A->next;
+    LNode *q = B->next;
+    LNode *s;
+    C = A;
+    C->next = NULL;
+    free(B);
+    while(p != NULL && q != NULL)
+    {
+        if(p->data <= q->data)
+        {
+            s = p;p = p->next;
+            s->next = C->next;
+            C->next = s;
+        }
+        else
+        {
+            s = q;q = q->next;
+            s->next = C->next;
+            C->next = s;
+        }
+    }
+    while(p != NULL)
+    {
+        s = p;
+        p = p->next;
+        s->next = C->next;
+        C->next = s;
+    }
+    while(q != NULL)
+    {
+        s = q;
+        q = q->next;
+        s->next = C->next;
+        C->next = s;
+    }
+}
 int main()
 {
     LNode *A;
@@ -64,7 +103,8 @@ int main()
     createLinkListR(A);
     createLinkListR(B);
     createLinkListR(C);
-    merge(A, B, C);
+    // merge(A, B, C);
+    deMerge(A, B, C);
     for(int i = 0; i < 8; i++)
     {
         cout << C->data << ",";
