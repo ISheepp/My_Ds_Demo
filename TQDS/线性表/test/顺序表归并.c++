@@ -15,7 +15,8 @@ int createList(int A[], int &length)
     }
     return 1;
 }
-void merge(int a[], int b[], int c[], int m, int n)
+//递增
+int merge(int a[], int b[], int c[], int m, int n)
 {
     int i = 0, j = 0;
     int k = 0;
@@ -29,13 +30,39 @@ void merge(int a[], int b[], int c[], int m, int n)
         c[k++] = a[i++];
     while (j < n)
         c[k++] = b[j++];
+    return m+n;
+}
+//递减
+void Nizhi(int c[], int length)
+{
+    int i = 0, j = length-1;
+    int temp;
+    for(i;i < j; i++,j--)
+    {
+        temp = c[i];
+        c[i] = c[j];
+        c[j] = temp;
+    }
 }
 int main()
 {
-    int test[10];
-    createList(test, length);
-    for(int i = 0; i < length; i++)
+    // int test[5] = {1, 2, 3, 4, 5};
+    // Nizhi(test, 5);
+    // for(int i = 0; i < 5; i++)
+    // {
+    //     cout << test[i] << ",";
+    // }
+    int a[4];
+    int b[3];
+    int c[7];
+    createList(a, length);
+    createList(b, length);
+    // merge(a, b, c ,4, 3);
+    int clength = merge(a, b, c ,4, 3);
+    Nizhi(c, clength);
+    for(int i = 0; i < clength; i++)
     {
-        cout << test[i] << ",";
+        cout << c[i] << ",";
     }
+    // cout << clength;
 }
