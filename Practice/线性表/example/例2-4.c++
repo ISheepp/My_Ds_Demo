@@ -47,7 +47,8 @@ int findAndDelete(LNode *C, int x)
     {
         //删除
         q = p->next;
-        p->next = p->next->next;
+        p->next = q->next;
+        // p->next = p->next->next;
         free(q);
         //删除结束
         return 1;
