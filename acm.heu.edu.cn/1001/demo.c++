@@ -1,13 +1,15 @@
 #include <iostream>
 using namespace std;
-int main(){
-    int a, b;
-    cin >> a >> b;
-    int sum = 0;
-    for(a; a <= b; a++)
+int main()
+{
+    int n, sum;
+    while (cin >> n)
     {
-        sum += a;
+        sum = 0;
+        for (int i = 1; i <= n; ++i)
+            sum += i;
+        cout << sum << endl
+             << endl;
     }
-    cout << endl;
-    cout << sum;
+    return 0;
 }
