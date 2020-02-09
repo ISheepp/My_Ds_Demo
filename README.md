@@ -7,7 +7,7 @@
   <img alt="Twitter Follow" src="https://badgen.net/badge/icon/twitter?icon=twitter&label">
   </a>
   <a class="header-badge" target="_blank" href="https://codelin.xyz">
-  <img alt="Twitter Follow" src="https://img.shields.io/badge/Author-%F0%9F%90%8FYang-lightgrey">
+  <img alt="author" src="https://img.shields.io/badge/Author-%F0%9F%90%8FYang-lightgrey">
   </a>
   <br>
   <sub> January--December, 2020
