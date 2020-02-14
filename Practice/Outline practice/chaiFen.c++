@@ -46,10 +46,12 @@ void chaiFen(LNode *head, LNode *&a, LNode *&b){
         else
         {
             LNode *temp = (LNode *)malloc(sizeof(LNode));
-            temp->data = p->data;
+            temp->data = p->data;      //数据域忘记赋值
             r->next = temp;
             r = r->next;
-        } 
+        }
+        l->next = NULL;
+        r->next = NULL;                //😔当时忘记设置为空，导致调试一直失败，花了好几个小时
     }
 }
 //打印单链表
@@ -73,6 +75,6 @@ int main(){
     cout << "偶数列：";
     showList(a);
     cout << "奇数列：";
-    //showList(b);
+    showList(b);
     system("pause");
 }
