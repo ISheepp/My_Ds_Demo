@@ -53,6 +53,7 @@ int main()
     }
     cout << endl;
     cout << length;
+    system("pause");
 }
 /*
 思路：
