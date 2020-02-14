@@ -3,6 +3,7 @@
 两个子链表中数据的相对次序与原链表一致。
 */
 #include <iostream>
+#include <cstdlib>
 using namespace std;
 typedef struct LNode{
     int data;
@@ -17,7 +18,7 @@ void createListR(LNode *&head){
     head->next = NULL;
     LNode *p, *r;
     r = head;
-    p->next = NULL;
+    //p->next = NULL;
     cout << "输入数据：";
     for(int i = 0; i < length; i++){
         p = (LNode*)malloc(sizeof(LNode));
@@ -29,40 +30,49 @@ void createListR(LNode *&head){
 }
 //拆分
 void chaiFen(LNode *head, LNode *&a, LNode *&b){
-    LNode *r = a;
-    LNode *l = b;
-    LNode *p, *q = NULL; //接收原链表的数据
-    while(head->next != NULL){
-        if(head->next->data % 2 == 0){
-            p = head->next;
-            r->next = p;
-            r = r->next;
-            head = head->next;
+    LNode *p = head;
+    LNode *l = a;
+    LNode *r = b;
+    l->next = NULL;
+    r->next = NULL;
+    while(p->next != NULL){
+        p = p->next;
+        if(p->data % 2 == 0){
+            LNode *temp = (LNode *)malloc(sizeof(LNode));
+            temp->data = p->data;
+            l->next = temp;
+            l = l->next;
         }
         else
         {
-            q = head->next;
-            l->next = q;
-            l = l->next;
-            head = head->next;
+            LNode *temp = (LNode *)malloc(sizeof(LNode));
+            temp->data = p->data;
+            r->next = temp;
+            r = r->next;
         } 
     }
 }
 //打印单链表
-void showList(LNode *head, int length){
-    for(int i = 0; i < length; i++){
-        cout << head->next->data << ",";
+void showList(LNode *head){
+    while(head->next != NULL){
         head = head->next;
+        cout << head->data << " ";
     }
     cout << endl;
 }
 int main(){
     LNode *test;
     LNode *a, *b;
+    a = (LNode*)malloc(sizeof(LNode));
+    b = (LNode*)malloc(sizeof(LNode));
+    a->next = NULL;
+    b->next = NULL;
+    cout <<"原链表：" << endl;
     createListR(test);
-    // createListR(a);
-    // createListR(b);
     chaiFen(test, a, b);
-    showList(a, 10);
-    showList(b, 10);
+    cout << "偶数列：";
+    showList(a);
+    cout << "奇数列：";
+    //showList(b);
+    system("pause");
 }
