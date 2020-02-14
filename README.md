@@ -21,7 +21,7 @@
 
 ## 🔧Contributions
 
-+ 王道数据结构
++ 文都数据结构
 + 天勤数据结构
 
 ## ✏Progress:
