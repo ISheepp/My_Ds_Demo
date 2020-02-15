@@ -26,9 +26,34 @@ void createLinkListR(LNode *&head)
         r = p;
     }
 }
+void showList(LNode *head){
+    LNode *p = head;
+    while (p->next != NULL)
+    {
+        p = p->next;
+        cout << p->data << " ";
+    }
+    cout << endl;
+}
+void reverse(LNode *&head){
+    LNode *p = head;
+    LNode *q;
+    while(p->next != NULL){
+        p = p->next;
+    }
+    q = p;
+    while(head->next != q){
+        LNode *t;
+        t = head->next;
+        head->next = t->next;
+        t->next = q->next;
+        q->next = t;
+    }
+}
 
 int main(){
     LNode *l;
-    l = (LNode*)malloc(sizeof(LNode));
     createLinkListR(l);
+    reverse(l);
+    showList(l);
 }
