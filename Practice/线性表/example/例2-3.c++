@@ -103,8 +103,8 @@ int main()
     createLinkListR(A);
     createLinkListR(B);
     createLinkListR(C);
-    merge(A, B, C);
-    // deMerge(A, B, C);
+    // merge(A, B, C);
+    deMerge(A, B, C);
     for(int i = 0; i < 8; i++)
     {
         cout << C->data << ",";
