@@ -13,7 +13,7 @@ void stackDestroy(stack *s){
     s->size = 0;
 }
 //插入，压栈
-void push(stack *s, int v){
+void push(stack *&s, int v){
     s->array[s->size++] = v;
 }
 //删除
@@ -36,3 +36,9 @@ int empty(stack *s){
     return !s->size;
 }
 //读栈顶元素就是要返回最后入栈的值，然后栈中元素个数减一。
+int main(){
+    stack *test;
+    push(test, 2);
+    cout << size(test);
+    system("pause");
+}
