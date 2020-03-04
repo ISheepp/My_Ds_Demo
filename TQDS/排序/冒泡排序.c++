@@ -4,6 +4,11 @@ using namespace std;
 int main(){
     int temp, i, j;
     int a[] = {34, 12, 55, 22, 78, 13};
+    cout << "排序前：";
+    for(int n : a){
+        cout << n << " ";
+    }
+    cout << endl;
     int length = 6;
     for (i = 0; i < length - 1; i++)
     {
@@ -16,6 +21,7 @@ int main(){
             }
         }
     }
+    cout << "排序后：";
     for (int i = 0; i < 6; i++)
     {
         /* code */
